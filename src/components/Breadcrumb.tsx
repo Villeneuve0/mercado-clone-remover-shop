@@ -2,9 +2,9 @@ import { ChevronRight } from "lucide-react";
 
 const Breadcrumb = () => {
   const breadcrumbItems = [
-    { label: "Casa e Jardim", href: "#" },
-    { label: "Limpeza", href: "#" },
-    { label: "Produtos de Limpeza", href: "#" },
+    { label: "Beleza e Cuidado Pessoal", href: "#" },
+    { label: "Cuidados com a Pele", href: "#" },
+    { label: "Cuidado Facial", href: "#" },
     { label: "Pasta japonesa remove anti rugas pele macia rejuvenecida", href: "#", active: true }
   ];
 
