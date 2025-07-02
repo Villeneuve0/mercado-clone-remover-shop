@@ -60,12 +60,11 @@ const ProductInfo = () => {
         {/* Rating */}
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
-            {[1, 2, 3, 4].map((star) => (
+            {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-4 h-4 fill-ml-orange text-ml-orange" />
             ))}
-            <Star className="w-4 h-4 text-gray-300" />
           </div>
-          <span className="text-text-primary font-medium">2.8</span>
+          <span className="text-text-primary font-medium">4.8</span>
           <span className="text-ml-blue">(70 opiniões)</span>
         </div>
       </div>
