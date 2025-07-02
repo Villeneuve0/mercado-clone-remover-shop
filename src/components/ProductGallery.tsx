@@ -8,7 +8,7 @@ const ProductGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
   
   const images = [
-    productMain,
+    "/lovable-uploads/2d5d64fb-2c3d-4b27-89f3-ffa45513eff7.png",
     productLogo,
     productMain,
     productLogo
