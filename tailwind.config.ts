@@ -24,6 +24,25 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				/* Mercado Livre brand colors */
+				'ml-yellow': 'hsl(var(--ml-yellow))',
+				'ml-yellow-dark': 'hsl(var(--ml-yellow-dark))',
+				'ml-blue': 'hsl(var(--ml-blue))',
+				'ml-blue-dark': 'hsl(var(--ml-blue-dark))',
+				'ml-green': 'hsl(var(--ml-green))',
+				'ml-orange': 'hsl(var(--ml-orange))',
+				
+				/* Product page colors */
+				'product-bg': 'hsl(var(--product-bg))',
+				'product-card': 'hsl(var(--product-card))',
+				'product-border': 'hsl(var(--product-border))',
+				
+				/* Text colors */
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -32,36 +51,12 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
-				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				success: 'hsl(var(--success))',
+				warning: 'hsl(var(--warning))',
+				error: 'hsl(var(--error))',
+				
+				/* Breadcrumb */
+				breadcrumb: 'hsl(var(--breadcrumb-color))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
