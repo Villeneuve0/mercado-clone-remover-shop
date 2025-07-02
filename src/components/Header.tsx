@@ -1,9 +1,49 @@
+import { useState, useEffect } from "react";
 import { Search, MapPin, ShoppingCart, User, Bell, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import mercadoLivreLogo from "@/assets/mercadolivre-logo.png";
 
+interface LocationData {
+  city: string;
+  region: string;
+  postal: string;
+  country: string;
+}
+
 const Header = () => {
+  const [location, setLocation] = useState<LocationData | null>(null);
+  const [isLoadingLocation, setIsLoadingLocation] = useState(true);
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        // Usando ipapi.co - API gratuita que não requer chave
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        
+        setLocation({
+          city: data.city || 'São Paulo',
+          region: data.region || 'SP',
+          postal: data.postal || '01310-100',
+          country: data.country_name || 'Brasil'
+        });
+      } catch (error) {
+        console.error('Erro ao buscar localização:', error);
+        // Fallback para localização padrão
+        setLocation({
+          city: 'São Paulo',
+          region: 'SP', 
+          postal: '01310-100',
+          country: 'Brasil'
+        });
+      } finally {
+        setIsLoadingLocation(false);
+      }
+    };
+
+    fetchLocation();
+  }, []);
   return (
     <header className="bg-ml-yellow border-b border-product-border">
       <div className="container mx-auto px-4">
@@ -12,7 +52,12 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1 text-text-secondary">
               <MapPin className="w-4 h-4" />
-              <span>Enviar para São Paulo 01310-100</span>
+              <span>
+                {isLoadingLocation 
+                  ? 'Localizando...' 
+                  : `Enviar para ${location?.city} ${location?.postal}`
+                }
+              </span>
             </div>
           </div>
           <div className="flex items-center gap-4 text-text-secondary">
