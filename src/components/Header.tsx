@@ -47,30 +47,27 @@ const Header = () => {
   return (
     <header className="bg-ml-yellow border-b border-product-border">
       <div className="container mx-auto px-4">
-        {/* Top section with logo */}
-        <div className="flex items-center justify-center py-3">
-          <img 
-            src="/lovable-uploads/7643d3a1-5fbc-4237-988d-59fdd2b256f7.png"
-            alt="Logo" 
-            className="h-16 w-auto"
-          />
-        </div>
-
-        {/* Location info */}
-        <div className="flex items-center justify-center py-2 text-sm border-b border-black/10">
-          <div className="flex items-center gap-1 text-text-secondary font-bold">
-            <MapPin className="w-4 h-4" />
-            <span>
-              {isLoadingLocation 
-                ? 'Localizando...' 
-                : `Enviar para ${location?.city} ${location?.postal}`
-              }
-            </span>
-          </div>
-        </div>
-
         {/* Main header */}
         <div className="flex items-center gap-6 py-3">
+          {/* Logo and location section */}
+          <div className="flex flex-col">
+            <img 
+              src="/lovable-uploads/7643d3a1-5fbc-4237-988d-59fdd2b256f7.png" 
+              alt="Logo" 
+              className="h-12 w-auto mb-2"
+            />
+            <div className="flex items-center gap-1 text-text-secondary font-bold text-sm">
+              <MapPin className="w-4 h-4" />
+              <span>
+                {isLoadingLocation 
+                  ? 'Localizando...' 
+                  : `Enviar para ${location?.city} ${location?.postal}`
+                }
+              </span>
+            </div>
+          </div>
+          
+          {/* Search bar */}
           <div className="flex-1 max-w-2xl">
             <div className="relative">
               <Input
@@ -88,15 +85,16 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap">
-              meli+ R$ 8,90 <span className="text-xs opacity-90">MÊS</span>
-            </div>
-            <div className="text-xs text-text-secondary font-bold whitespace-nowrap">
-              COM CASHBACK<br/>E DESCONTOS EXCLUSIVOS
-            </div>
+          {/* Meli+ section */}
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/cab2f6f5-49f9-46ec-bb1c-dcee352ddbb0.png" 
+              alt="meli+ R$ 8,90 MÊS COM CASHBACK E DESCONTOS EXCLUSIVOS" 
+              className="h-8 w-auto"
+            />
           </div>
 
+          {/* User actions */}
           <div className="flex items-center gap-6 text-sm font-bold">
             <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary p-1">
               Favoritos
