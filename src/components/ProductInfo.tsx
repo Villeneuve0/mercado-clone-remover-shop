@@ -16,7 +16,8 @@ const ProductInfo = () => {
       discount: 34,
       price: 197.00,
       priceEach: 197.00,
-      badge: null
+      badge: null,
+      link: "https://seguro.payt.com.br/a/P8zo0012i1k9qoyV"
     },
     {
       id: 1,
@@ -26,7 +27,8 @@ const ProductInfo = () => {
       discount: 40,
       price: 297.00,
       priceEach: 99.00,
-      badge: "MAIS POPULAR"
+      badge: "MAIS POPULAR",
+      link: "https://seguro.payt.com.br/a/2n1eDD0RhgBqxeKd"
     },
     {
       id: 2,
@@ -36,7 +38,19 @@ const ProductInfo = () => {
       discount: 43,
       price: 397.00,
       priceEach: 79.40,
-      badge: "MELHOR VALOR"
+      badge: "MELHOR VALOR",
+      link: "https://seguro.payt.com.br/a/r93vqNPksRMpxoYg"
+    },
+    {
+      id: 3,
+      name: "Tratamento 12 meses",
+      description: "12 unidades",
+      originalPrice: 1188.00,
+      discount: 41,
+      price: 697.00,
+      priceEach: 58.08,
+      badge: "ECONOMIA MÁXIMA",
+      link: "https://seguro.payt.com.br/a/4Lvbjqa1T7bw4vzV"
     }
   ];
 
@@ -85,7 +99,8 @@ const ProductInfo = () => {
             >
               {treatment.badge && (
                 <div className={`absolute -top-2 left-4 px-2 py-1 rounded text-xs font-medium text-white ${
-                  treatment.badge === "MAIS POPULAR" ? "bg-ml-orange" : "bg-ml-green"
+                  treatment.badge === "MAIS POPULAR" ? "bg-ml-orange" : 
+                  treatment.badge === "MELHOR VALOR" ? "bg-ml-green" : "bg-purple-500"
                 }`}>
                   {treatment.badge}
                 </div>
@@ -200,7 +215,10 @@ const ProductInfo = () => {
 
       {/* Action buttons */}
       <div className="space-y-3">
-        <Button className="w-full bg-ml-blue hover:bg-ml-blue-dark text-white py-3 text-lg">
+        <Button 
+          className="w-full bg-ml-blue hover:bg-ml-blue-dark text-white py-3 text-lg"
+          onClick={() => window.open(selectedProduct.link, '_blank')}
+        >
           Comprar agora
         </Button>
         <Button variant="outline" className="w-full border-ml-blue text-ml-blue hover:bg-blue-50 py-3">
