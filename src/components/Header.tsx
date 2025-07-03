@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Search, MapPin, ShoppingCart, User, Bell, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import mercadoLivreLogo from "@/assets/mercadolivre-logo.png";
+// import handshakeLogo from "@/assets/handshake-logo.png";
 
 interface LocationData {
   city: string;
@@ -47,9 +47,18 @@ const Header = () => {
   return (
     <header className="bg-ml-yellow border-b border-product-border">
       <div className="container mx-auto px-4">
-        {/* Top bar */}
-        <div className="flex items-center justify-between py-2 text-sm">
-          <div className="flex items-center gap-1 text-text-secondary">
+        {/* Top section with logo */}
+        <div className="flex items-center justify-center py-3">
+          <img 
+            src="/lovable-uploads/7643d3a1-5fbc-4237-988d-59fdd2b256f7.png"
+            alt="Logo" 
+            className="h-16 w-auto"
+          />
+        </div>
+
+        {/* Location info */}
+        <div className="flex items-center justify-center py-2 text-sm border-b border-black/10">
+          <div className="flex items-center gap-1 text-text-secondary font-bold">
             <MapPin className="w-4 h-4" />
             <span>
               {isLoadingLocation 
@@ -62,12 +71,6 @@ const Header = () => {
 
         {/* Main header */}
         <div className="flex items-center gap-6 py-3">
-          <img 
-            src={mercadoLivreLogo} 
-            alt="Mercado Livre" 
-            className="h-8 w-auto"
-          />
-          
           <div className="flex-1 max-w-2xl">
             <div className="relative">
               <Input
@@ -86,18 +89,15 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap">
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap">
               meli+ R$ 8,90 <span className="text-xs opacity-90">MÊS</span>
             </div>
-            <div className="text-xs text-text-secondary whitespace-nowrap">
+            <div className="text-xs text-text-secondary font-bold whitespace-nowrap">
               COM CASHBACK<br/>E DESCONTOS EXCLUSIVOS
             </div>
           </div>
 
-          <div className="flex items-center gap-6 text-sm">
-            <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary p-1">
-              Ludmila
-            </Button>
+          <div className="flex items-center gap-6 text-sm font-bold">
             <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary p-1">
               Favoritos
             </Button>
@@ -108,7 +108,7 @@ const Header = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-8 py-2 text-sm border-t border-black/10">
+        <nav className="flex items-center gap-8 py-2 text-sm border-t border-black/10 font-bold">
           <a href="#" className="text-text-secondary hover:text-text-primary">Categorias</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Ofertas</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Cupons</a>
@@ -116,7 +116,7 @@ const Header = () => {
           <a href="#" className="text-text-secondary hover:text-text-primary">Moda</a>
           <a href="#" className="text-text-secondary hover:text-text-primary flex items-center gap-1">
             Mercado Play
-            <span className="bg-blue-600 text-white text-xs px-1 rounded">NOVO</span>
+            <span className="bg-blue-600 text-white text-xs px-1 rounded font-bold">NOVO</span>
           </a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Vender</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Contato</a>
