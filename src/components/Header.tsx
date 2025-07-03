@@ -49,30 +49,23 @@ const Header = () => {
       <div className="container mx-auto px-4">
         {/* Top bar */}
         <div className="flex items-center justify-between py-2 text-sm">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1 text-text-secondary">
-              <MapPin className="w-4 h-4" />
-              <span>
-                {isLoadingLocation 
-                  ? 'Localizando...' 
-                  : `Enviar para ${location?.city} ${location?.postal}`
-                }
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 text-text-secondary">
-            <a href="#" className="hover:text-text-primary">Vender</a>
-            <a href="#" className="hover:text-text-primary">Ajuda</a>
-            <a href="#" className="hover:text-text-primary">Contato</a>
+          <div className="flex items-center gap-1 text-text-secondary">
+            <MapPin className="w-4 h-4" />
+            <span>
+              {isLoadingLocation 
+                ? 'Localizando...' 
+                : `Enviar para ${location?.city} ${location?.postal}`
+              }
+            </span>
           </div>
         </div>
 
         {/* Main header */}
-        <div className="flex items-center gap-4 py-3">
+        <div className="flex items-center gap-6 py-3">
           <img 
             src={mercadoLivreLogo} 
             alt="Mercado Livre" 
-            className="h-10 w-auto"
+            className="h-8 w-auto"
           />
           
           <div className="flex-1 max-w-2xl">
@@ -80,12 +73,12 @@ const Header = () => {
               <Input
                 type="text"
                 placeholder="Buscar produtos, marcas e muito mais..."
-                className="w-full pl-4 pr-12 py-3 rounded border border-product-border bg-white focus:ring-2 focus:ring-ml-blue focus:border-ml-blue"
+                className="w-full pl-4 pr-12 py-2.5 rounded border border-product-border bg-white focus:ring-2 focus:ring-ml-blue focus:border-ml-blue text-base"
               />
               <Button 
                 variant="ghost" 
                 size="sm"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-text-muted hover:text-text-primary"
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 text-text-muted hover:text-text-primary p-2"
               >
                 <Search className="w-5 h-5" />
               </Button>
@@ -93,35 +86,38 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded text-sm font-medium">
-              meli+ R$ 9,90 MDS
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap">
+              meli+ R$ 8,90 <span className="text-xs opacity-90">MÊS</span>
+            </div>
+            <div className="text-xs text-text-secondary whitespace-nowrap">
+              COM CASHBACK<br/>E DESCONTOS EXCLUSIVOS
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary">
-              Crie a sua conta
+          <div className="flex items-center gap-6 text-sm">
+            <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary p-1">
+              Ludmila
             </Button>
-            <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary">
-              Entre
+            <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary p-1">
+              Favoritos
             </Button>
-            <Button variant="ghost" size="sm" className="text-text-secondary hover:text-text-primary">
-              Compras
-            </Button>
-            <Button variant="ghost" size="sm" className="relative text-text-secondary hover:text-text-primary">
+            <Button variant="ghost" size="sm" className="relative text-text-secondary hover:text-text-primary p-1">
               <ShoppingCart className="w-5 h-5" />
             </Button>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-8 py-2 text-sm">
+        <nav className="flex items-center gap-8 py-2 text-sm border-t border-black/10">
           <a href="#" className="text-text-secondary hover:text-text-primary">Categorias</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Ofertas</a>
-          <a href="#" className="text-text-secondary hover:text-text-primary">Histórico</a>
+          <a href="#" className="text-text-secondary hover:text-text-primary">Cupons</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Supermercado</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Moda</a>
-          <a href="#" className="text-text-secondary hover:text-text-primary">Mercado Play</a>
+          <a href="#" className="text-text-secondary hover:text-text-primary flex items-center gap-1">
+            Mercado Play
+            <span className="bg-blue-600 text-white text-xs px-1 rounded">NOVO</span>
+          </a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Vender</a>
           <a href="#" className="text-text-secondary hover:text-text-primary">Contato</a>
         </nav>
