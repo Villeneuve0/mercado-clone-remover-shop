@@ -63,7 +63,7 @@ const ProductDescription = () => {
                   <li>Limpe bem o rosto com água morna</li>
                   <li>Aplique uma pequena quantidade da pasta</li>
                   <li>Massageie suavemente em movimentos circulares</li>
-                  <li>Deixe agir por 20-30 minutos</li>
+                  <li>Deixe agir de 3 a 5 minutos</li>
                   <li>Enxágue com água morna</li>
                   <li>Use 2-3 vezes por semana para melhores resultados</li>
                 </ol>
