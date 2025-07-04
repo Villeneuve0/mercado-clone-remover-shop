@@ -54,7 +54,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/7643d3a1-5fbc-4237-988d-59fdd2b256f7.png" 
               alt="Logo" 
-              className="h-12 w-auto mb-2"
+              className="h-10 w-auto mb-2 object-contain"
             />
             <div className="flex items-center gap-1 text-text-secondary font-bold text-sm">
               <MapPin className="w-4 h-4" />
