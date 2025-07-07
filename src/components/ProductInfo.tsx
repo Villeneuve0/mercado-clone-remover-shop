@@ -176,10 +176,24 @@ const ProductInfo = () => {
           <span className="font-medium">Frete grátis</span>
         </div>
         <div className="text-ml-green text-sm font-medium">
-          Chegará grátis entre 22 e 25/jul
+          Chegará grátis entre {(() => {
+            const today = new Date();
+            const startDate = new Date(today);
+            startDate.setDate(today.getDate() + 7);
+            const endDate = new Date(today);
+            endDate.setDate(today.getDate() + 10);
+            return `${startDate.getDate()}/${(startDate.getMonth() + 1).toString().padStart(2, '0')} e ${endDate.getDate()}/${(endDate.getMonth() + 1).toString().padStart(2, '0')}`;
+          })()}
         </div>
         <div className="text-text-secondary text-sm">
-          Chegará entre 17 e 18/jul
+          Chegará entre {(() => {
+            const today = new Date();
+            const startDate = new Date(today);
+            startDate.setDate(today.getDate() + 2);
+            const endDate = new Date(today);
+            endDate.setDate(today.getDate() + 3);
+            return `${startDate.getDate()}/${(startDate.getMonth() + 1).toString().padStart(2, '0')} e ${endDate.getDate()}/${(endDate.getMonth() + 1).toString().padStart(2, '0')}`;
+          })()}
         </div>
         <Button variant="link" className="text-ml-blue p-0 h-auto text-sm">
           Mais formas de entrega
