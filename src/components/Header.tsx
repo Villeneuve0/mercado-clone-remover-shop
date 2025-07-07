@@ -61,7 +61,7 @@ const Header = () => {
               <span>
                 {isLoadingLocation 
                   ? 'Localizando...' 
-                  : `Enviar para ${location?.city} ${location?.postal}`
+                  : `Enviar para ${location?.city}`
                 }
               </span>
             </div>
