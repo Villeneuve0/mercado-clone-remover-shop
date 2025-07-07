@@ -242,7 +242,7 @@ const ProductInfo = () => {
       <div className="bg-product-bg rounded p-4 space-y-3">
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-text-primary font-medium">Vendido por SOTI1602192</div>
+            <div className="text-text-primary font-medium">Vendido por FARMA +</div>
             <div className="flex items-center gap-2 text-sm">
               <Badge className="bg-ml-blue text-white">MercadoLíder</Badge>
               <span className="text-text-secondary">+1000 vendas</span>
