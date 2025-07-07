@@ -52,7 +52,7 @@ const Header = () => {
           {/* Logo and location section */}
           <div className="flex flex-col">
             <img 
-              src="/lovable-uploads/7643d3a1-5fbc-4237-988d-59fdd2b256f7.png" 
+              src="/lovable-uploads/1453d82f-221a-4c18-b7b3-c32b45f24d2d.png" 
               alt="Logo" 
               className="h-10 w-auto mb-2 object-contain"
             />
