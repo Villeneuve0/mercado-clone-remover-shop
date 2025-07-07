@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ProductGallery from "@/components/ProductGallery";
 import ProductInfo from "@/components/ProductInfo";
 import ProductDescription from "@/components/ProductDescription";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -27,6 +28,8 @@ const Index = () => {
         {/* Product Description */}
         <ProductDescription />
       </div>
+      
+      <Footer />
     </div>
   );
 };
