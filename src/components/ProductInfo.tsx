@@ -175,11 +175,14 @@ const ProductInfo = () => {
           <TruckIcon className="w-5 h-5" />
           <span className="font-medium">Frete grátis</span>
         </div>
-        <p className="text-sm text-text-secondary">
-          Saiba os prazos de entrega e as formas de envio.
-        </p>
+        <div className="text-ml-green text-sm font-medium">
+          Chegará grátis entre 22 e 25/jul
+        </div>
+        <div className="text-text-secondary text-sm">
+          Chegará entre 17 e 18/jul
+        </div>
         <Button variant="link" className="text-ml-blue p-0 h-auto text-sm">
-          Calcular o prazo de entrega
+          Mais formas de entrega
         </Button>
       </div>
 
